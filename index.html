@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="title" content="PO-PDDL: Learning Symbolic POMDPs from Visual Demonstrations for Robot Planning Under Uncertainty">
+  <meta name="description" content="Real-world robot task planning must operate under both stochastic action execution and partial observability, yet constructing Partially Observable Markov...">
+  <meta name="keywords" content="POMDP, PDDL, robot planning, partial observability, symbolic planning, visual demonstrations">
+  <meta name="author" content="PO-PDDL">
+  <meta name="theme-color" content="#2563eb">
+  <title>PO-PDDL | Learning Symbolic POMDPs from Visual Demonstrations</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+</head>
+<body>
+  <main>
+    <section class="hero project-hero">
+      <div class="hero-body">
+        <div class="container is-max-widescreen">
+          <div class="hero-copy has-text-centered">
+            <p class="eyebrow">Project Page</p>
+            <h1 class="title project-title">PO-PDDL: Learning Symbolic POMDPs from Visual Demonstrations for Robot Planning Under Uncertainty</h1>
+            <div class="hero-actions">
+              <a class="button is-dark is-disabled" href="javascript:void(0)" aria-disabled="true">
+                <span class="icon"><i class="ai ai-arxiv"></i></span>
+                <span>arXiv (Coming Soon)</span>
+              </a>
+              <a class="button is-dark is-disabled" href="javascript:void(0)" aria-disabled="true">
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span>Code (Coming Soon)</span>
+              </a>
+              <a class="button is-dark" href="#demo-videos">
+                <span class="icon"><i class="fas fa-play-circle"></i></span>
+                <span>View Demos</span>
+              </a>
+              <a class="button is-dark" href="#experimental-results">
+                <span class="icon"><i class="fas fa-chart-line"></i></span>
+                <span>Results</span>
+              </a>
+              <a class="button is-dark" href="prompt-library/index.html">
+                <span class="icon"><i class="fas fa-folder-open"></i></span>
+                <span>Prompt Library</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight pipeline-section">
+      <div class="container is-max-widescreen">
+        <img class="pipeline-image" src="contexts/pipeline.png" alt="PO-PDDL learning pipeline" loading="lazy">
+      </div>
+    </section>
+
+    <section class="section section-tight abstract-section">
+      <div class="container is-max-widescreen">
+        <div class="section-heading has-text-centered">
+          <h2 class="title is-3">Abstract</h2>
+        </div>
+        <div class="content abstract-copy">
+          <p>Real-world robot task planning must operate under both stochastic action execution and partial observability, yet constructing Partially Observable Markov Decision Process (POMDP) models for real robotics domains remains difficult and labor-intensive. We introduce PO-PDDL, a symbolic formulation of POMDPs that preserves the relational structure and LLM-friendly syntax of the Planning Domain Definition Language (PDDL), while explicitly modeling partial observability, stochasticity, and beliefs. Building on this formulation, we propose a demonstration-driven pipeline for learning PO-PDDL models. The proposed method reconstructs latent symbolic state trajectories from real-robot execution videos, identifies partial observability via inconsistencies between inferred states and visual observations, and learns stochastic transition and observation models accordingly. The resulting PO-PDDL domains are reusable across tasks and enable online belief-space planning under both perception and execution uncertainty. Experiments on real-world long-horizon manipulation tasks show that our method consistently outperforms existing PDDL and POMDP model-learning approaches, achieving robust task planning under uncertainty with significantly lower planning cost.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight demo-section" id="demo-videos">
+      <div class="container is-max-widescreen">
+        <div class="section-heading has-text-centered">
+          <h2 class="title is-3">Demo Videos</h2>
+        </div>
+        <div class="demo-grid">
+          <article class="demo-card">
+            <p class="demo-instruction demo-instruction-top">push the black box to the top of the yellow drawer.</p>
+            <video class="demo-video" controls preload="metadata">
+              <source src="contexts/demo_videos/task_1/combined_vertical_2x_browser.mp4" type="video/mp4">
+            </video>
+          </article>
+          <article class="demo-card">
+            <p class="demo-instruction demo-instruction-top">put one of the blocks on top of one of the drawers, and close all the drawer.</p>
+            <video class="demo-video" controls preload="metadata">
+              <source src="contexts/demo_videos/task_2/combined_vertical_2x_browser.mp4" type="video/mp4">
+            </video>
+          </article>
+          <article class="demo-card">
+            <p class="demo-instruction demo-instruction-top">place all the cups with dark liquid on the top of the green drawer on the right, and keep all the cups without dark liquid on the table.</p>
+            <video class="demo-video" controls preload="metadata">
+              <source src="contexts/demo_videos/task_3/combined_vertical_2x_browser.mp4" type="video/mp4">
+            </video>
+          </article>
+          <article class="demo-card">
+            <p class="demo-instruction demo-instruction-top">put all the blocks in the same drawer, and close all the drawer.</p>
+            <video class="demo-video" controls preload="metadata">
+              <source src="contexts/demo_videos/task_4/combined_vertical_2x_browser.mp4" type="video/mp4">
+            </video>
+          </article>
+          <article class="demo-card">
+            <p class="demo-instruction demo-instruction-top">put all the blocks in the same drawer, and close all the drawer.</p>
+            <video class="demo-video" controls preload="metadata">
+              <source src="contexts/demo_videos/task_5/combined_vertical_2x_browser.mp4" type="video/mp4">
+            </video>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight results-section" id="experimental-results">
+      <div class="container is-max-widescreen">
+        <div class="section-heading has-text-centered">
+          <h2 class="title is-3">Experimental Results</h2>
+        </div>
+        <figure class="figure-panel results-panel">
+          <img src="contexts/experimental%20results/comparison_results.png" alt="Experimental comparison results" loading="lazy">
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer project-footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>This page was adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

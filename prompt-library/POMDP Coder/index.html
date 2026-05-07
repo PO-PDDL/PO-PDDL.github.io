@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>POMDP Coder</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      background: #fff;
+      line-height: 1.5;
+    }
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+    p {
+      margin: 0 0 18px;
+      color: #444;
+    }
+    .nav {
+      margin: 0 0 24px;
+      font-size: 0.98rem;
+    }
+    .nav a {
+      color: #1a5fb4;
+      text-decoration: none;
+      margin-right: 14px;
+    }
+    .nav a:hover { text-decoration: underline; }
+    .section-title {
+      margin: 28px 0 10px;
+      font-size: 1.08rem;
+      font-weight: 600;
+      color: #222;
+    }
+    .dirlist {
+      border-top: 1px solid #d8d8d8;
+    }
+    .row {
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(0, 2.3fr) auto;
+      gap: 14px;
+      padding: 10px 0;
+      border-bottom: 1px solid #e6e6e6;
+      align-items: start;
+    }
+    .name {
+      min-width: 0;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+    .name a {
+      color: #1a5fb4;
+      text-decoration: none;
+    }
+    .name a:hover { text-decoration: underline; }
+    .desc {
+      min-width: 0;
+      color: #555;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      font-size: 0.95rem;
+    }
+    .meta {
+      text-align: right;
+      white-space: nowrap;
+      font-size: 0.92rem;
+    }
+    .meta a {
+      color: #1a5fb4;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+    .meta a:hover { text-decoration: underline; }
+    .note {
+      margin-top: 18px;
+      font-size: 0.92rem;
+      color: #666;
+    }
+    @media (max-width: 760px) {
+      .row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+      .meta {
+        text-align: left;
+        white-space: normal;
+      }
+      .meta a {
+        margin-left: 0;
+        margin-right: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>POMDP Coder</h1>
+    <p>Prompts used by the reproduced pomdp_coder pipeline and runtime.</p>
+    <div class="nav">
+      <a href="../index.html">Prompt Library</a>
+      <a href="README.md">Overview Markdown</a>
+    </div>
+    <div class="section-title">Offline learning</div>
+    <div class="dirlist">
+      <div class="row">
+        <div class="name"><a href="task_interface_system_prompt/index.html">task_interface_system_prompt/</a></div>
+        <div class="desc">Induces a reusable symbolic task interface before any model program is proposed.</div>
+        <div class="meta"><a href="task_interface_system_prompt/task_interface_system_prompt.md">prompt</a><a href="task_interface_system_prompt/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="symbolic_dataset_grounding_system_prompt/index.html">symbolic_dataset_grounding_system_prompt/</a></div>
+        <div class="desc">Converts one annotated episode into symbolic transition records aligned with the induced task interface.</div>
+        <div class="meta"><a href="symbolic_dataset_grounding_system_prompt/symbolic_dataset_grounding_system_prompt.md">prompt</a><a href="symbolic_dataset_grounding_system_prompt/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="init_program_proposal/index.html">init_program_proposal/</a></div>
+        <div class="desc">Learns the initial-state sampler.</div>
+        <div class="meta"><a href="init_program_proposal/init_program_proposal.md">prompt</a><a href="init_program_proposal/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="transition_program_proposal/index.html">transition_program_proposal/</a></div>
+        <div class="desc">Learns the generative transition model.</div>
+        <div class="meta"><a href="transition_program_proposal/transition_program_proposal.md">prompt</a><a href="transition_program_proposal/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="observation_program_proposal/index.html">observation_program_proposal/</a></div>
+        <div class="desc">Learns the symbolic observation model.</div>
+        <div class="meta"><a href="observation_program_proposal/observation_program_proposal.md">prompt</a><a href="observation_program_proposal/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="reward_program_proposal/index.html">reward_program_proposal/</a></div>
+        <div class="desc">Learns the reward model.</div>
+        <div class="meta"><a href="reward_program_proposal/reward_program_proposal.md">prompt</a><a href="reward_program_proposal/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="init_program_repair/index.html">init_program_repair/</a></div>
+        <div class="desc">Repairs the initial-state sampler.</div>
+        <div class="meta"><a href="init_program_repair/init_program_repair.md">prompt</a><a href="init_program_repair/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="transition_program_repair/index.html">transition_program_repair/</a></div>
+        <div class="desc">Repairs the generative transition model.</div>
+        <div class="meta"><a href="transition_program_repair/transition_program_repair.md">prompt</a><a href="transition_program_repair/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="observation_program_repair/index.html">observation_program_repair/</a></div>
+        <div class="desc">Repairs the symbolic observation model.</div>
+        <div class="meta"><a href="observation_program_repair/observation_program_repair.md">prompt</a><a href="observation_program_repair/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="reward_program_repair/index.html">reward_program_repair/</a></div>
+        <div class="desc">Repairs the reward model.</div>
+        <div class="meta"><a href="reward_program_repair/reward_program_repair.md">prompt</a><a href="reward_program_repair/README.md">readme</a></div>
+      </div>
+    </div>
+    <div class="section-title">Online planning</div>
+    <div class="dirlist">
+      <div class="row">
+        <div class="name"><a href="goal_system_prompt/index.html">goal_system_prompt/</a></div>
+        <div class="desc">Translates a natural-language instruction into a machine-checkable goal DSL used by the runtime planner.</div>
+        <div class="meta"><a href="goal_system_prompt/goal_system_prompt.md">prompt</a><a href="goal_system_prompt/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="runtime_observation_prompt/index.html">runtime_observation_prompt/</a></div>
+        <div class="desc">Asks a multimodal LLM to judge which candidate observable atoms are visually supported at the current step.</div>
+        <div class="meta"><a href="runtime_observation_prompt/runtime_observation_prompt.md">prompt</a><a href="runtime_observation_prompt/README.md">readme</a></div>
+      </div>
+    </div>
+
+    <div class="note">This folder combines offline learning prompts and online planning/runtime prompts for pomdp_coder.</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Offline learning</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      background: #fff;
+      line-height: 1.5;
+    }
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+    p {
+      margin: 0 0 18px;
+      color: #444;
+    }
+    .nav {
+      margin: 0 0 24px;
+      font-size: 0.98rem;
+    }
+    .nav a {
+      color: #1a5fb4;
+      text-decoration: none;
+      margin-right: 14px;
+    }
+    .nav a:hover { text-decoration: underline; }
+    .section-title {
+      margin: 28px 0 10px;
+      font-size: 1.08rem;
+      font-weight: 600;
+      color: #222;
+    }
+    .dirlist {
+      border-top: 1px solid #d8d8d8;
+    }
+    .row {
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(0, 2.3fr) auto;
+      gap: 14px;
+      padding: 10px 0;
+      border-bottom: 1px solid #e6e6e6;
+      align-items: start;
+    }
+    .name {
+      min-width: 0;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+    .name a {
+      color: #1a5fb4;
+      text-decoration: none;
+    }
+    .name a:hover { text-decoration: underline; }
+    .desc {
+      min-width: 0;
+      color: #555;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      font-size: 0.95rem;
+    }
+    .meta {
+      text-align: right;
+      white-space: nowrap;
+      font-size: 0.92rem;
+    }
+    .meta a {
+      color: #1a5fb4;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+    .meta a:hover { text-decoration: underline; }
+    .note {
+      margin-top: 18px;
+      font-size: 0.92rem;
+      color: #666;
+    }
+    @media (max-width: 760px) {
+      .row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+      .meta {
+        text-align: left;
+        white-space: normal;
+      }
+      .meta a {
+        margin-left: 0;
+        margin-right: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Offline learning</h1>
+    <p>Prompts used by POMDPDDL.offline_model_learning.learning_pipeline.cli.</p>
+    <div class="nav">
+      <a href="../index.html">Prompt Library</a>
+      <a href="README.md">Overview Markdown</a>
+    </div>
+    <div class="section-title">Folders</div>
+    <div class="dirlist">
+      <div class="row">
+        <div class="name"><a href="active_observation_discovery_prompt/index.html">active_observation_discovery_prompt/</a></div>
+        <div class="desc">Prompt documentation.</div>
+        <div class="meta"><a href="active_observation_discovery_prompt/active_observation_discovery_prompt.md">prompt</a><a href="active_observation_discovery_prompt/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="active_observation_vlm_confirmation_prompt/index.html">active_observation_vlm_confirmation_prompt/</a></div>
+        <div class="desc">Prompt documentation.</div>
+        <div class="meta"><a href="active_observation_vlm_confirmation_prompt/active_observation_vlm_confirmation_prompt.md">prompt</a><a href="active_observation_vlm_confirmation_prompt/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="effect_completeness_review_prompt/index.html">effect_completeness_review_prompt/</a></div>
+        <div class="desc">Prompt documentation.</div>
+        <div class="meta"><a href="effect_completeness_review_prompt/effect_completeness_review_prompt.md">prompt</a><a href="effect_completeness_review_prompt/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="effect_variant_review_prompt/index.html">effect_variant_review_prompt/</a></div>
+        <div class="desc">Prompt documentation.</div>
+        <div class="meta"><a href="effect_variant_review_prompt/effect_variant_review_prompt.md">prompt</a><a href="effect_variant_review_prompt/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="episode_effect_delta_prompt/index.html">episode_effect_delta_prompt/</a></div>
+        <div class="desc">Prompt documentation.</div>
+        <div class="meta"><a href="episode_effect_delta_prompt/episode_effect_delta_prompt.md">prompt</a><a href="episode_effect_delta_prompt/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="episode_effect_repair_prompt/index.html">episode_effect_repair_prompt/</a></div>
+        <div class="desc">Prompt documentation.</div>
+        <div class="meta"><a href="episode_effect_repair_prompt/episode_effect_repair_prompt.md">prompt</a><a href="episode_effect_repair_prompt/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="goal_inference_prompt/index.html">goal_inference_prompt/</a></div>
+        <div class="desc">Prompt documentation.</div>
+        <div class="meta"><a href="goal_inference_prompt/goal_inference_prompt.md">prompt</a><a href="goal_inference_prompt/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="init_observation_description_review_prompt/index.html">init_observation_description_review_prompt/</a></div>
+        <div class="desc">Prompt documentation.</div>
+        <div class="meta"><a href="init_observation_description_review_prompt/init_observation_description_review_prompt.md">prompt</a><a href="init_observation_description_review_prompt/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="init_observation_vlm_confirmation_prompt/index.html">init_observation_vlm_confirmation_prompt/</a></div>
+        <div class="desc">Prompt documentation.</div>
+        <div class="meta"><a href="init_observation_vlm_confirmation_prompt/init_observation_vlm_confirmation_prompt.md">prompt</a><a href="init_observation_vlm_confirmation_prompt/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="init_scene_description_prompt/index.html">init_scene_description_prompt/</a></div>
+        <div class="desc">Prompt documentation.</div>
+        <div class="meta"><a href="init_scene_description_prompt/init_scene_description_prompt.md">prompt</a><a href="init_scene_description_prompt/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="init_state_location_repair_prompt/index.html">init_state_location_repair_prompt/</a></div>
+        <div class="desc">Prompt documentation.</div>
+        <div class="meta"><a href="init_state_location_repair_prompt/init_state_location_repair_prompt.md">prompt</a><a href="init_state_location_repair_prompt/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="initial_state_inference_prompt/index.html">initial_state_inference_prompt/</a></div>
+        <div class="desc">Prompt documentation.</div>
+        <div class="meta"><a href="initial_state_inference_prompt/initial_state_inference_prompt.md">prompt</a><a href="initial_state_inference_prompt/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="object_typing_prompt/index.html">object_typing_prompt/</a></div>
+        <div class="desc">Prompt documentation.</div>
+        <div class="meta"><a href="object_typing_prompt/object_typing_prompt.md">prompt</a><a href="object_typing_prompt/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="passive_in_reveal_action_selection_prompt/index.html">passive_in_reveal_action_selection_prompt/</a></div>
+        <div class="desc">Prompt documentation.</div>
+        <div class="meta"><a href="passive_in_reveal_action_selection_prompt/passive_in_reveal_action_selection_prompt.md">prompt</a><a href="passive_in_reveal_action_selection_prompt/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="passive_in_visible_objects_prompt/index.html">passive_in_visible_objects_prompt/</a></div>
+        <div class="desc">Prompt documentation.</div>
+        <div class="meta"><a href="passive_in_visible_objects_prompt/passive_in_visible_objects_prompt.md">prompt</a><a href="passive_in_visible_objects_prompt/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="passive_observation_description_review_prompt/index.html">passive_observation_description_review_prompt/</a></div>
+        <div class="desc">Prompt documentation.</div>
+        <div class="meta"><a href="passive_observation_description_review_prompt/passive_observation_description_review_prompt.md">prompt</a><a href="passive_observation_description_review_prompt/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="passive_observation_vlm_confirmation_prompt/index.html">passive_observation_vlm_confirmation_prompt/</a></div>
+        <div class="desc">Prompt documentation.</div>
+        <div class="meta"><a href="passive_observation_vlm_confirmation_prompt/passive_observation_vlm_confirmation_prompt.md">prompt</a><a href="passive_observation_vlm_confirmation_prompt/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="precondition_selection_prompt/index.html">precondition_selection_prompt/</a></div>
+        <div class="desc">Prompt documentation.</div>
+        <div class="meta"><a href="precondition_selection_prompt/precondition_selection_prompt.md">prompt</a><a href="precondition_selection_prompt/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="predicate_comment_prompt/index.html">predicate_comment_prompt/</a></div>
+        <div class="desc">Prompt documentation.</div>
+        <div class="meta"><a href="predicate_comment_prompt/predicate_comment_prompt.md">prompt</a><a href="predicate_comment_prompt/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="predicate_inventory_prompt/index.html">predicate_inventory_prompt/</a></div>
+        <div class="desc">Prompt documentation.</div>
+        <div class="meta"><a href="predicate_inventory_prompt/predicate_inventory_prompt.md">prompt</a><a href="predicate_inventory_prompt/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="semantic_action_category_prompt/index.html">semantic_action_category_prompt/</a></div>
+        <div class="desc">Prompt documentation.</div>
+        <div class="meta"><a href="semantic_action_category_prompt/semantic_action_category_prompt.md">prompt</a><a href="semantic_action_category_prompt/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="semantic_action_template_bootstrap_prompt/index.html">semantic_action_template_bootstrap_prompt/</a></div>
+        <div class="desc">Prompt documentation.</div>
+        <div class="meta"><a href="semantic_action_template_bootstrap_prompt/semantic_action_template_bootstrap_prompt.md">prompt</a><a href="semantic_action_template_bootstrap_prompt/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="semantic_action_template_resolution_prompt/index.html">semantic_action_template_resolution_prompt/</a></div>
+        <div class="desc">Prompt documentation.</div>
+        <div class="meta"><a href="semantic_action_template_resolution_prompt/semantic_action_template_resolution_prompt.md">prompt</a><a href="semantic_action_template_resolution_prompt/README.md">readme</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="step_scene_description_prompt/index.html">step_scene_description_prompt/</a></div>
+        <div class="desc">Prompt documentation.</div>
+        <div class="meta"><a href="step_scene_description_prompt/step_scene_description_prompt.md">prompt</a><a href="step_scene_description_prompt/README.md">readme</a></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

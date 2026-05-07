@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prompt Library</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      background: #fff;
+      line-height: 1.5;
+    }
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+    p {
+      margin: 0 0 18px;
+      color: #444;
+    }
+    .nav {
+      margin: 0 0 24px;
+      font-size: 0.98rem;
+    }
+    .nav a {
+      color: #1a5fb4;
+      text-decoration: none;
+      margin-right: 14px;
+    }
+    .nav a:hover { text-decoration: underline; }
+    .section-title {
+      margin: 28px 0 10px;
+      font-size: 1.08rem;
+      font-weight: 600;
+      color: #222;
+    }
+    .dirlist {
+      border-top: 1px solid #d8d8d8;
+    }
+    .row {
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(0, 2.3fr) auto;
+      gap: 14px;
+      padding: 10px 0;
+      border-bottom: 1px solid #e6e6e6;
+      align-items: start;
+    }
+    .name {
+      min-width: 0;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+    .name a {
+      color: #1a5fb4;
+      text-decoration: none;
+    }
+    .name a:hover { text-decoration: underline; }
+    .desc {
+      min-width: 0;
+      color: #555;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      font-size: 0.95rem;
+    }
+    .meta {
+      text-align: right;
+      white-space: nowrap;
+      font-size: 0.92rem;
+    }
+    .meta a {
+      color: #1a5fb4;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+    .meta a:hover { text-decoration: underline; }
+    .note {
+      margin-top: 18px;
+      font-size: 0.92rem;
+      color: #666;
+    }
+    @media (max-width: 760px) {
+      .row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+      .meta {
+        text-align: left;
+        white-space: normal;
+      }
+      .meta a {
+        margin-left: 0;
+        margin-right: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Prompt Library</h1>
+    <p>A simple directory view for the prompt documentation.</p>
+    <div class="nav">
+      <a href="../index.html">Home</a>
+      <a href="overview.md">Overview Markdown</a>
+    </div>
+    <div class="section-title">Folders</div>
+    <div class="dirlist">
+      <div class="row">
+        <div class="name"><a href="Offline%20learning/index.html">Offline learning/</a></div>
+        <div class="desc">Prompts used by POMDPDDL.offline_model_learning.learning_pipeline.cli.</div>
+        <div class="meta"><a href="Offline%20learning/README.md">README</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="Online%20Planning/index.html">Online Planning/</a></div>
+        <div class="desc">Prompts used by generate_online_problem.py and the runtime observation prompt in run_interactive_executor.py.</div>
+        <div class="meta"><a href="Online%20Planning/README.md">README</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="POMDP%20Coder/index.html">POMDP Coder/</a></div>
+        <div class="desc">Prompts used by the reproduced pomdp_coder pipeline and runtime.</div>
+        <div class="meta"><a href="POMDP%20Coder/README.md">README</a></div>
+      </div>
+      <div class="row">
+        <div class="name"><a href="vlm_with_history_prompt/index.html">vlm_with_history_prompt/</a></div>
+        <div class="desc">Chooses the next atomic robot action from scene images, optional action history, and reference demonstrations.</div>
+        <div class="meta"><a href="vlm_with_history_prompt/vlm_with_history_prompt.md">prompt</a><a href="vlm_with_history_prompt/README.md">readme</a></div>
+      </div>
+    </div>
+    <div class="note">Each group contains prompt folders with a prompt markdown file and an English README.</div>
+  </div>
+</body>
+</html>

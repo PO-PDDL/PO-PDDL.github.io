@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+
+# Demo video sources and intermediate artifacts
+contexts/demo_videos/task_*/cam_high.mp4
+contexts/demo_videos/task_*/cam_right_wrist.mp4
+contexts/demo_videos/task_*/combined_vertical.mp4
+contexts/demo_videos/task_*/combined_vertical_2x.mp4
+contexts/demo_videos/task_*/combined_vertical_2x_trimmed.mp4
+
+# Keep the final browser-ready website videos
+!contexts/demo_videos/task_*/combined_vertical_2x_browser.mp4
+
